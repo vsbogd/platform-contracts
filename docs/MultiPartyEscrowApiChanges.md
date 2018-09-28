@@ -71,8 +71,7 @@ state in Registry instead of using separate Agent contract.
 # Daemon API changes
 
 Sequence diagram of calls during client/daemon interaction:
-![Client/daemon interaction sequence diagram][clientDaemonInteractionSequenceDiagram]
-
+![Client/daemon interaction sequence diagram](clientDaemonInteractionSequenceDiagram.svg "Client/daemon interaction diagram")
 
 ## RPC call API
 
@@ -101,13 +100,13 @@ payment channel cache.
 
 1. Add MultiPartyEscrow contract
 2. Add separate snet-cli command ```mpe``` to interact with service using MPE API:
-  - publish service
-  - add group of replicas
-  - add replica
-  - deposit tokens to MPE
-  - open payment channel
-  - close channel after expiration
-  - call service using opened channel
+   - publish service
+   - add group of replicas
+   - add replica
+   - deposit tokens to MPE
+   - open payment channel
+   - close channel after expiration
+   - call service using opened channel
 3. Implement separate request handler in snet-daemon to handle requests using
    MPE payment channels
    - listen channel related blockchain events
@@ -118,4 +117,3 @@ payment channel cache.
 4. Implement dApp using MPE contracts
 5. Remove legacy API
 
-[clientDaemonInteractionSequenceDiagram]: https://www.plantuml.com/plantuml/svg/bLHhSw985FtEhw1cFwofbGI3egOgkmEeu1jHVAMcgBPjfUNH28seltv9HCUOcMJt2mNTvvvxxk7U-oThKnf4JmyFIPBS1oxmAKLxUW-9z_3FwzlpejCg61li2JArfNZkz66jZilrWb6WW_veDbNZeZav21DTYJK9EARsEBRfbglgjL4KhPjxKJOEN6CUQmrPL0BR4MVRedJi5plM63H61kYhOkCe3USLR-cKQlqw97WwWEQ-D5kjxSuG6tPxvkqB_J4jj8tMNh262dNgUqkVk-sosPiD2nDrqrG8Fsw4NCpn0vFKcxRUqCiUd9EWL37MlAdndB0dLbkigV5nwFTvPTpnYmufQJEduy6HqL_mL9BzLO5JkKgXFTChExpSBAHcs_6492BhiYrvAwyasejXYn0XgCmM6crMjk74t2xtckKvwc9dJ6iBXECfjvCQLKaZMrmCEMcdLwEqc4c4uzIwqjACUMpnfPMiM0alMtRB6HSdngW_LdgRBcnLBVrnYttz43RaGdXeYbBmE8NoSevwoVWe7sSbtW204zeWD9tONQd-aOnLiTabmEVcPLayE9ohQ2EffMwEUanmLLvjpMrbkwahDSK0eu6d7XO52EibqHr8crrFQ9XhZPJ5uDZiLES3kze6xP9LD3RqwAvcOS_rXMfarI0A7w7FDnDH7A66eMCuR26jhzMKRYaPWTe22sB2ALEtwWcJOPighha1Gcjbo5tjqBK6KknKd7ezcWx66nKPk1BibON5V8ye26dikGn3CNKH-wsBeWYiKSHox11jO-H3nDOmM8V0-yOmwv340Rj40OamPHGN8v-otCiV8Lh--9ljwdNswNoRsm4tHdVCws6AM8S8-Ib6KfifnYCxP57Y83_AmJUM_6jqdhqD0eSBxmAa4m9Hz78A-C7-zNo2CyXVClVtzvaw4Y2VXJRmVUJ-Hk8hnCeWkGY5EmnHbZlFeds0Gq0nyVDiY08NGs2zCLzadQXg07d4JzbwAD71mKlpA1bbHdrtbJuh9JjuOgFOUybW5bx-O9zP_gQEyDN-YBAKi9d4_q6NUXE4duS49yrfvWYlVIlxpFraoT-otdsmy-919ZQt11JapzHtJ7R_C_ib0De8EfUaBeZe-OTOQKzIz1kIKnCDJtxSvBrZpkTNq2k5KK3y2ENIbzYzehsov0Fc_H-1nASXW3IL5b8CN3R1r5w6807kbSZhHZkN15s0lLnMKPvT0JVwhrtEFP-Tk3zr-wTHMQUS6k3BC1ybbvRDfl3zDAHRu1tBBwVZPYukRlvYBZ83RutzqiSpuCDI-TG3xhmWljn1RxldVUadZSptz9dknty1 "Client/daemon interaction diagram"
